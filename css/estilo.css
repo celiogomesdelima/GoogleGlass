@@ -7,7 +7,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 #interface {
-  width: 900px;
+  width: 950px;
   background-color: #ffffff;
   margin: -30px auto 0px auto;
   box-shadow: 0px 0px 10px grey;
@@ -88,6 +88,7 @@ a:hover {
   border-bottom: 1px solid #606060;
   height: 150px;
   background: no-repeat url("../imagens/glass-logo-peq.jpg") 0px 100px;
+  margin-bottom: 20px;
 }
 #cabecalho h1 {
   font-family: "Titillium Web", sans-serif;

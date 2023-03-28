@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="funcoes.js"></script>
+    <script>
+      function calctotal() {
+        var qtd = parseInt(document.getElementById("iQtd").value);
+        var tot = qtd * 1500;
+        document.getElementById("iTot").value = tot;
+      }
+    </script>
     <title>Tudo sobre Google Glass</title>
   </head>
   <body>
@@ -16,11 +24,36 @@
         <nav id="menu">
           <h1>Menu Principal</h1>
           <ul>
-            <li onmouseover="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="index.html">Home</a></li>
-            <li onmouseover="mudafoto('imagens/especificacoes.png')" onmouseout="mudafoto('imagens/gcontato.png')"><a href="especificacoes.html">Especificações</a></li>
-            <li onmouseover="mudafoto('imagens/fotos.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
-            <li onmouseover="mudafoto('imagens/multimidia.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
-            <li onmouseover="mudafoto('imagens/contato.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="faleconosco.html">Fale conosco</a></li>
+            <li
+              onmouseover="mudafoto('imagens/home.png')"
+              onmouseout="mudafoto('imagens/contato.png')"
+            >
+              <a href="index.html">Home</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/especificacoes.png')"
+              onmouseout="mudafoto('imagens/gcontato.png')"
+            >
+              <a href="especificacoes.html">Especificações</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/fotos.png')"
+              onmouseout="mudafoto('imagens/contato.png')"
+            >
+              <a href="fotos.html">Fotos</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/multimidia.png')"
+              onmouseout="mudafoto('imagens/contato.png')"
+            >
+              <a href="multimidia.html">Multimídia</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/contato.png')"
+              onmouseout="mudafoto('imagens/contato.png')"
+            >
+              <a href="faleconosco.html">Fale conosco</a>
+            </li>
           </ul>
         </nav>
         <hgroup>
@@ -33,44 +66,180 @@
           alt="Óculos google pequeno"
         />
       </header>
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
-<footer id="rodape">
-    <p>Copyright&copy; 2013 - by Gustavo Guanabara </br>
-      <a href="/index.html" target="_blank" rel="noreferrer noopener">Facebook</a> |
-      <a href="/index.html" target="_blank" rel="noreferrer noopener">Twitter</a>
-    </p>
-  </footer>
-</div>
-</body>
+      <article id="artigoprincipal">
+        <header>
+          <hgroup>
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Gustavo Guanabara</h2>
+          </hgroup>
+        </header>
+      </article>
+      <form method="post" action="index.html" oninput="calctotal();">
+        <fieldset id="usuario">
+          <legend>Identificação do Usuário</legend>
+          <p>
+            <label for="iNome">Nome:</label
+            ><input
+              type="text"
+              size="40"
+              maxlength="50"
+              id="iNome"
+              name="nNome"
+              placeholder="Digite seu nome completo"
+            />
+          </p>
+          <p>
+            <label for="iSenha">Senha:</label
+            ><input
+              type="password"
+              size="10"
+              maxlength="10"
+              id="iSenha"
+              name="nsenha"
+              placeholder="até 10 dígitos"
+            />
+          </p>
+          <p>
+            <label for="iEmail">E-mail:</label
+            ><input
+              type="email"
+              size="40"
+              maxlength="50"
+              id="iEmail"
+              name="nEmail"
+              placeholder="Digite seu melhor E-mail"
+            />
+          </p>
+          <fieldset id="sexo">
+            <legend>Sexo</legend>
+            <p>
+            <input type="radio" name="nSexo" id="iMasc" />
+            <label for="iMasc">Masculino</label>
+            <input type="radio" name="nSexo" id="iFemi" />
+            <label for="iFemi">Feminino</label>
+          </p>
+          </fieldset>
+          <p>
+            <label for="iDtn">Data de Nascimento:</label
+            ><input type="date" id="iDtn" name="nDtn" />
+          </p>
+        </fieldset>
+        <fieldset id="endereco">
+          <legend>Endereço do Usuário</legend>
+          <p>
+            <label for="iRua">Logradouro:</label>
+            <input
+              type="text"
+              size="40"
+              maxlength="50"
+              id="iRua"
+              name="nRua"
+              placeholder="Nome da rua, avenida, etc."
+            />
+          </p>
+          <p>
+            <label for="iNum">Número:</label
+            ><input
+              type="text"
+              size="5"
+              name="nNum"
+              id="iNum"
+              placeholder="---"
+              min="0"
+            />
+          </p>
+          <p>
+            <label for="iEst">Estado:</label>
+            <select name="nEst" id="iEst">
+              <optgroup label="Sudeste">
+                <option value="RJ">RJ</option>
+                <option value="SP">SP</option>
+                <option value="MG">MG</option>
+              </optgroup>
+              <optgroup label="Sul">
+                <option value="PR">PR</option>
+                <option value="SC">SC</option>
+                <option value="RS">RS</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <label for="iCid">Cidade:</label>
+            <input
+              type="text"
+              size="40"
+              maxlength="50"
+              id="iCid"
+              name="nCid"
+              placeholder="Digite o nome da sua cidade"
+              list="cidades"
+            />
+          </p>
+          <datalist id="cidades">
+            <option value="Rio de Janeiro"></option>
+            <option value="São Paulo"></option>
+            <option value="Curitiba"></option>
+            <option value="Belo Horizonte"></option>
+            <option value="Florianópolis"></option>
+            <option value="Porto Alegre"></option>
+          </datalist>
+        </fieldset>
+        <fieldset id="mensagem">
+          <legend>Mensagem do Usuário</legend>
+          <p>
+            <label for="nUrg">Grau de Urgência:</label> Mín.<input
+              type="range"
+              name="nUrg"
+              id="iUrg"
+              min="0"
+              max="2"
+            />Máx.
+          </p>
+          <p>
+            <label for="iMes">Mensagem:</label
+            ><textarea name="nMes" id="iMes" rows="5" cols="50"></textarea>
+          </p>
+        </fieldset>
+        <fieldset id="comprar">
+          <legend>Quero um Google Glass</legend>
+          <p>
+            <input type="checkbox" name="nAdq" id="iAdq" checked /><label
+              for="iAdq"
+              >Gostaria de adquirir um Google Glass quando disponível</label
+            >
+          </p>
+          <p>
+            <label for="iCor">Cor:</label
+            ><input type="color" name="nCor" id="iCor" />
+          </p>
+          <p>
+            <label for="iQtd">Quantidade:</label><input type="number"/
+            name="nQtd" id="iQtd" min="0">
+          </p>
+          <p>
+            <label for="iTot">Preço Total: R$</label
+            ><input name="nTot" id="iTot" readonly />
+          </p>
+        </fieldset>
+        <input type="image" src="./imagens/botao-enviar.png" />
+      </form>
+      <footer id="rodape">
+        <p>Copyright&copy; 2013 - by Gustavo Guanabara</p>
+        <p>
+          <a href="/index.html" target="_blank" rel="noreferrer noopener"
+            >Facebook</a
+          >
+          |
+          <a
+            href="/index.html"
+            name="bEnv"
+            target="_blank"
+            rel="noreferrer noopener"
+            >Twitter</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
