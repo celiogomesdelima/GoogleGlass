@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/media.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="funcoes.js"></script>
+    <title>Tudo sobre Google Glass</title>
+  </head>
+  <body>
+    <div id="interface">
+      <header id="cabecalho">
+        <nav id="menu">
+          <h1>Menu Principal</h1>
+          <ul>
+            <li
+              onmouseover="mudafoto('imagens/home.png')"
+              onmouseout="mudafoto('imagens/multimidia.png')"
+            >
+              <a href="index.html">Home</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/especificacoes.png')"
+              onmouseout="mudafoto('imagens/multimidia.png')"
+            >
+              <a href="especificacoes.html">Especificações</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/fotos.png')"
+              onmouseout="mudafoto('imagens/multimidia.png')"
+            >
+              <a href="fotos.html">Fotos</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/multimidia.png')"
+              onmouseout="mudafoto('imagens/multimidia.png')"
+            >
+              <a href="multimidia.html">Multimídia</a>
+            </li>
+            <li
+              onmouseover="mudafoto('imagens/contato.png')"
+              onmouseout="mudafoto('imagens/multimidia.png')"
+            >
+              <a href="faleconosco.html">Fale conosco</a>
+            </li>
+          </ul>
+        </nav>
+        <hgroup>
+          <h1>Google Glass</h1>
+          <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        <img
+          id="icone"
+          src="imagens/glass-oculos-preto-peq.png"
+          alt="Óculos google pequeno"
+        />
+      </header>
+      <article id="artigoprincipal">
+        <header>
+          <hgroup>
+            <h3>Tecnologia > Inovações</h3>
+            <h1>Saiba tudo sobre o Google Glass</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 23/Abril/2013</h3>
+          </hgroup>
+        </header>
+        <div id="tv-radio">
+          <audio src="./media/Savior - Telecasted.mp3"
+            id="musica"
+            controls="controls"
+            type="audio/mpeg">
+            Desculpe, mas não foi possível exibir o áudio</audio>
+          <video src="./media/Google Glass How-to_ Getting Started.mp4" id="filme" controls="controls" type="video/mp4" poster="./imagens/video-mini03.jpg">Desculpe, mas não foi possível exibir o vídeo</video>
+        </div>
+      </article>
+      <footer id="rodape">
+        <p>Copyright&copy; 2013 - by Gustavo Guanabara</p>
+        <p>
+          <a href="/index.html" target="_blank" rel="noreferrer noopener"
+            >Facebook</a
+          >
+          |
+          <a href="/index.html" target="_blank" rel="noreferrer noopener"
+            >Twitter</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
